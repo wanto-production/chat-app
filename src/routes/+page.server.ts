@@ -71,5 +71,11 @@ export const actions ={
         })
 
         return{ message:"berhasil input nama!" }
+    },
+    signout:async ({ locals }) => {
+        const { error } = await locals.supabase.auth.signOut()
+
+        if(error) return{ message:error.message }
+        return{ mesage:"logout berhasil!" }
     }
 }

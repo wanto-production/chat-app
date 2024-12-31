@@ -63,6 +63,9 @@
             <Button type="submit">enter</Button>
         </form>
         {:else}
+            <form action="?/signout" method="post" use:enhance>
+                <Button type="submit">logOut</Button>
+            </form>
             <form class=" flex gap-2 items-center " action="?/chat" method="post" use:enhance>
                 <Input type="text" name="message" class=" placeholder:text-black" placeholder={`send message as ${data.user2?.name}`} required/>
                 <Button type="submit">send</Button>

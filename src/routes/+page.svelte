@@ -113,10 +113,8 @@
                             <span class="text-xs text-gray-500 mb-1">from you</span>
                             <div class="bg-green-200 rounded-tl-lg rounded-tr-lg rounded-bl-lg p-3 max-w-sm text-sm shadow">
                                 <p>{cht.message}</p>
-                                <form class=" w-full flex justify-start mt-2">
-                                    <button onclick={() =>deleteChat(cht.id)} class="text-red-500 font-[100]">delete</button>
-                                </form>
                             </div>
+                            <button onclick={() =>deleteChat(cht.id)} class="text-red-500 font-[100]">delete</button>
                         </div>
                     {:else}
                         <div class="flex flex-col items-start self-start">

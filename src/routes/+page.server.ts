@@ -77,5 +77,20 @@ export const actions ={
 
         if(error) return{ message:error.message }
         return{ mesage:"logout berhasil!" }
+    },
+    changename:async ({ request,locals }) => {
+        const formData = await request.formData()
+        const { username,email } = Object.fromEntries(formData) as {
+            username:string,
+            email:string
+        }
+
+        const { error } = await locals.supabase.from("users").update([
+            {name:username}
+        ]).eq("email",email)
+
+        if(error) return{ message:error.message }
+        
+        return{ message:"ganti nama berhasil " }
     }
 }

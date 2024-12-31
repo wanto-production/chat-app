@@ -71,7 +71,7 @@
     </div>
     <div class=" w-[300px] bg-white rounded-md h-[320px] relative overflow-x-hidden">
         <h1 class=" sticky top-0 w-full text-center bg-[#0c0c0c] text-white p-2 z-20">chat global</h1>
-        <div class=" flex flex-col gap-2 justify-center items-center p-3 gap3 h-fit w-full" use:autoAnimate>
+        <div class=" flex flex-col-reverse gap-2 justify-center items-center p-3 gap3 h-fit w-full" use:autoAnimate>
             {#if chat}
                 {#each chat as cht}
                     <Card.Root class={` ${cht.user.name == data.user2?.name?'bg-green-200 self-start':'bg-white self-end border-2 border-gray-500 text-end'}  w-[200px] `}>

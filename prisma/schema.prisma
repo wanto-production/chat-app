@@ -28,6 +28,7 @@ model Chat {
   message String
   userId  String
   user    User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+  create  DateTime @default(now())
 
   @@map("chats")
 }

@@ -29,7 +29,9 @@
                 name,
                 email
             )
-        `)
+        `).order("create",{
+            ascending:true
+        })
 
         //@ts-ignore
         chat = chats as Chat[]

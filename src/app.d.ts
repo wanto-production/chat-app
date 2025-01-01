@@ -18,6 +18,7 @@ declare global {
   interface Chat {
     id: any,
     message: any, 
+    create:string,
     user: { 
         id: any, 
         name: any, 

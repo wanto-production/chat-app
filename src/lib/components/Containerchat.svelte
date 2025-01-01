@@ -8,7 +8,6 @@
         user:User|null
     }
 
-    const badWordsRegex = /(fuck|shit|bitch|asshole|damn|piss|hell|fag|cunt|prick|bastard|idiot|memek|kontol|peler|anjing|babi|sial|goblok|brengsek|setan|ngentot|ngentot|jembu|jembot|jembo)/g;
 
 
     const { user,supabase }:Props = $props()
@@ -73,7 +72,7 @@
         <div class="flex flex-col items-start self-start text-start" aria-label="Message from {cht.user.name}">
             <span class="text-xs text-gray-500 mb-1" aria-hidden="true">From {cht.user.name}</span>
             <div class="bg-white rounded-tl-lg rounded-tr-lg rounded-br-lg p-3 max-w-sm text-sm shadow">
-                <p>{String(cht.message).replace(badWordsRegex,"*")}</p>
+                <p>{String(cht.message)}</p>
                 <span class="text-xs text-gray-500 block text-right mt-1">{diffForHumans(cht.create)}</span>
             </div>
         </div>

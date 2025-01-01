@@ -8,7 +8,7 @@
         user:User|null
     }
 
-    const badWordsRegex = /\b(?:fuck|shit|bitch|asshole|damn|piss|hell|fag|cunt|prick|bastard|idiot|memek|kontol|peler|anjing|babi|sial|goblok|brengsek|setan|ngentot|ngentot|jembu|jembot|jembo)\b/g;
+    const badWordsRegex = /(fuck|shit|bitch|asshole|damn|piss|hell|fag|cunt|prick|bastard|idiot|memek|kontol|peler|anjing|babi|sial|goblok|brengsek|setan|ngentot|ngentot|jembu|jembot|jembo)/g;
 
 
     const { user,supabase }:Props = $props()
